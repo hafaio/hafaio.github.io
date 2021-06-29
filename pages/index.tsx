@@ -38,6 +38,7 @@ export default function Hero(): ReactElement {
       <Head>
         <title>hafa.io</title>
         <link rel="icon" href={favicon} />
+        <meta name="google-site-verification" content="GSZtecn0mSgjHOwdsGTs9h_1fok8AZ7saSkYSuZ18yE" />
       </Head>
       <div className="fixed w-full shadow bg-white bg-opacity-80 backdrop-filter backdrop-blur backdrop-saturate-125 transition-opacity duration-500 opacity-0 scroll-show dark:bg-gray-800 dark:bg-opacity-80 dark:backdrop-brightness-125">
         <div className="max-w-4xl h-full mx-auto my-2 px-6 flex items-center justify-between dark:text-gray-100">

@@ -10,7 +10,7 @@ export interface ButtonProps {
 function Button({ text, href, icon }: ButtonProps): ReactElement {
   return (
     <ExternalAnchor href={href} className="flex-grow md:flex-grow-0">
-      <button className="w-full text-gray-600 rounded-lg px-4 py-2 border transition hover:text-black hover:shadow active:shadow-none space-x-2 flex justify-center items-center dark:text-gray-400 dark:hover:text-gray-100 dark:border-gray-400 dark:hover:border-gray-100 dark:hover:shadow-none">
+      <button className="w-full text-gray-600 rounded-lg px-4 py-2 border transition hover:text-black hover:shadow active:shadow-none space-x-2 flex justify-center items-center dark:text-gray-400 dark:hover:text-gray-100 dark:border-gray-400 dark:hover:border-gray-100 dark:hover:shadow-none focus:ring ring-teal-400">
         <span>{text}</span>
         {icon}
       </button>
@@ -30,8 +30,8 @@ export default function Project({
   buttons: ButtonProps[];
 }): ReactElement {
   return (
-    <li className="rounded-lg shadow overflow-hidden bg-gradient-to-br from-white to-gray-100 md:flex dark:from-gray-800 dark:to-gray-900 dark:shadow-none">
-      <div className="bg-gradient-to-br from-gray-300 to-gray-400 h-40 flex justify-center align-center md:h-auto md:w-60">
+    <li className="rounded-lg shadow overflow-hidden bg-gray-100 md:flex dark:bg-gray-700 dark:shadow-none">
+      <div className="bg-gray-300 h-40 flex justify-center align-center md:h-auto md:w-60">
         <img src={logo} alt={name} height={64} width={64} />
       </div>
       <div className="space-y-4 p-4">

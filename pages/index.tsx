@@ -1,5 +1,6 @@
 import { ReactElement } from "react";
 import Head from "next/head";
+import StaticImage from "../components/static-image";
 import Link from "next/link";
 import hafa from "../public/hafa.svg";
 import asciiMath from "../public/ascii-math.svg";
@@ -37,7 +38,7 @@ export default function Hero(): ReactElement {
     <div className="dark:bg-gray-800">
       <Head>
         <title>hafa.io</title>
-        <link rel="icon" href={favicon} />
+        <link rel="icon" href={favicon.src} />
         <meta
           name="google-site-verification"
           content="GSZtecn0mSgjHOwdsGTs9h_1fok8AZ7saSkYSuZ18yE"
@@ -47,7 +48,12 @@ export default function Hero(): ReactElement {
         <div className="max-w-4xl h-full mx-auto my-2 px-6 flex items-center justify-between dark:text-gray-100">
           <Link href="/">
             <a className="flex items-center">
-              <img src={hafa} alt="hafa.io logo" height={36} width={36} />
+              <StaticImage
+                src={hafa}
+                alt="hafa.io logo"
+                height={36}
+                width={36}
+              />
               <span className="font-cursive text-4xl pl-2">hafa.io</span>
             </a>
           </Link>
@@ -62,7 +68,7 @@ export default function Hero(): ReactElement {
       </div>
       <div
         className={`h-screen w-full bg-center bg-cover bg-fixed flex justify-center items-center`}
-        style={{ backgroundImage: `url(${splash})` }}
+        style={{ backgroundImage: `url(${splash.src})` }}
       >
         <span className="text-8xl font-bold text-white transition-opacity duration-500 scroll-hide font-cursive select-none">
           hafa.io

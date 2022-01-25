@@ -3,3 +3,6 @@
 
 # next
 /.next
+
+# typescript
+/tsconfig.tsbuildinfo

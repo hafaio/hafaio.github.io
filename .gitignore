@@ -1,6 +1,6 @@
 # node
+.pnp.*
 .yarn/*
-!.yarn/cache
 !.yarn/patches
 !.yarn/plugins
 !.yarn/releases
@@ -8,7 +8,7 @@
 !.yarn/versions
 
 # next
-/.next
+.next
 
 # typescript
-/tsconfig.tsbuildinfo
+tsconfig.tsbuildinfo

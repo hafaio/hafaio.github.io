@@ -32,8 +32,8 @@ export default function Project({
 }): ReactElement {
   return (
     <li className="rounded-lg shadow overflow-hidden bg-gray-100 md:flex dark:bg-gray-700 dark:shadow-none">
-      <div className="bg-gray-300 h-40 flex justify-center align-center md:h-auto md:w-60">
-        <StaticImage src={logo} alt={name} height={64} width={64} />
+      <div className="bg-gray-300 h-40 flex shrink-0 justify-center align-center md:h-auto md:w-48">
+        <StaticImage src={logo} alt={name} height={72} width={72} />
       </div>
       <div className="space-y-4 p-4">
         <h3 className="text-2xl font-semibold text-center md:text-left dark:text-gray-100">

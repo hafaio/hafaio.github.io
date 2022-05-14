@@ -4,6 +4,7 @@ import StaticImage from "../components/static-image";
 import Link from "next/link";
 import hafa from "../public/hafa.svg";
 import asciiMath from "../public/ascii-math.svg";
+import repub from "../public/repub.svg";
 import favicon from "../public/favicon.ico";
 import splash from "../public/irina-shishkina-FMlZAUFmkvw-unsplash.jpg";
 import Project from "../components/project";
@@ -79,6 +80,26 @@ export default function Hero(): ReactElement {
           Products
         </h2>
         <ul className="px-4 space-y-8 w-full">
+          <Project
+            logo={repub}
+            name="reMarkable ePub"
+            description={`reMarkable ePub is an open source chrome extension
+            for converting web pages into ePubs for reading on reMarkable. In
+            contrast to the "Read on reMarkable" extension, this allows more
+            customization and allows you to include images.`}
+            buttons={[
+              {
+                text: "Chrome Store",
+                href: "https://chrome.google.com/webstore/detail/repub/blkjpagbjaekkpojgcgdapmikoaolpbl",
+                icon: <FaChrome />,
+              },
+              {
+                text: "Github",
+                href: "https://github.com/hafaio/repub",
+                icon: <FaGithub />,
+              },
+            ]}
+          />
           <Project
             logo={asciiMath}
             name="Ascii Math Unicode"

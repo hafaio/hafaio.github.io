@@ -10,7 +10,14 @@ import splash from "../public/irina-shishkina-FMlZAUFmkvw-unsplash.jpg";
 import Project from "../components/project";
 import ExternalAnchor from "../components/external-anchor";
 import { useTheme } from "../components/theme";
-import { FaChrome, FaGithub, FaSun, FaMoon, FaAdjust } from "react-icons/fa";
+import {
+  FaGlobe,
+  FaChrome,
+  FaGithub,
+  FaSun,
+  FaMoon,
+  FaAdjust,
+} from "react-icons/fa";
 
 function FooterIcon({
   href,
@@ -77,7 +84,7 @@ export default function Hero(): ReactElement {
       </div>
       <div className="min-h-screen max-w-4xl mx-auto flex flex-col items-center">
         <h2 className="text-4xl font-bold py-4 mt-4 bg-clip-text text-transparent bg-gradient-to-br from-teal-400 to-teal-500">
-          Products
+          Projects
         </h2>
         <ul className="px-4 space-y-8 w-full">
           <Project
@@ -109,6 +116,22 @@ export default function Hero(): ReactElement {
                 text: "Chrome Store",
                 href: "https://chrome.google.com/webstore/detail/ascii-math-unicode/llehdcbaonklonjlfgeggamnebgggoab",
                 icon: <FaChrome />,
+              },
+              {
+                text: "Github",
+                href: "https://github.com/hafaio/ascii-math-unicode",
+                icon: <FaGithub />,
+              },
+            ]}
+          />
+          <Project
+            name="Spot Color Separation"
+            description="Website for separating an image into spot colors. Intended for decomposing images for a Risograph."
+            buttons={[
+              {
+                text: "Website",
+                href: "https://hafaio.github.io/color-separation",
+                icon: <FaGlobe />,
               },
               {
                 text: "Github",

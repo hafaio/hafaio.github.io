@@ -1,11 +1,11 @@
 {
+  "private": true,
   "name": "hafa-next",
   "version": "0.1.0",
-  "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build && next export -o docs && touch docs/.nojekyll",
-    "fmt": "prettier --write 'pages/**/*.{ts,tsx}' 'components/**/*.{ts,tsx}' 'styles/**/*.css' '*.{json,js,ts}'",
+    "fmt": "prettier --write --cache 'pages/**/*.{ts,tsx}' 'components/**/*.{ts,tsx}' 'styles/**/*.css' '*.{json,js,ts}'",
     "lint": "next lint && tsc"
   },
   "devDependencies": {
@@ -27,7 +27,8 @@
     "typescript": "^4.6.4"
   },
   "resolutions": {
-    "minimist": "1.2.6"
+    "minimist": "^1.2.6",
+    "minimatch": "^3.0.5"
   },
   "eslintConfig": {
     "extends": [
@@ -45,5 +46,5 @@
       ]
     }
   },
-  "packageManager": "yarn@3.2.0"
+  "packageManager": "yarn@3.2.4"
 }

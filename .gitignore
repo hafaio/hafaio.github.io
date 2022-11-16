@@ -7,8 +7,7 @@
 !.yarn/sdks
 !.yarn/versions
 
-# next
-.next
-
-# typescript
+# cache
 tsconfig.tsbuildinfo
+.next
+.cache

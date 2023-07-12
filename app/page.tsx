@@ -1,23 +1,20 @@
-import Head from "next/head";
+import { Metadata } from "next";
 import Link from "next/link";
 import { ReactElement } from "react";
-import {
-  FaAdjust,
-  FaChrome,
-  FaGithub,
-  FaGlobe,
-  FaMoon,
-  FaSun,
-} from "react-icons/fa";
+import { FaChrome, FaGithub, FaGlobe } from "react-icons/fa";
 import ExternalAnchor from "../components/external-anchor";
 import Project from "../components/project";
 import StaticImage from "../components/static-image";
-import { useTheme } from "../components/theme";
+import ThemeButton from "../components/theme-button";
 import asciiMath from "../public/ascii-math.svg";
-import favicon from "../public/favicon.ico";
 import hafa from "../public/hafa.svg";
 import splash from "../public/irina-shishkina-FMlZAUFmkvw-unsplash.jpg";
 import repub from "../public/repub.svg";
+import riso from "../public/riso-logo.svg";
+
+export const metadata: Metadata = {
+  title: "hafa.io",
+};
 
 function FooterIcon({
   href,
@@ -37,21 +34,8 @@ function FooterIcon({
 }
 
 export default function Hero(): ReactElement {
-  const { theme, toggleTheme } = useTheme();
-  const themeTitle =
-    theme === undefined ? "System Theme" : theme ? "Dark Theme" : "Light Theme";
-  const themeIcon =
-    theme === undefined ? <FaAdjust /> : theme ? <FaMoon /> : <FaSun />;
   return (
     <div className="dark:bg-gray-800">
-      <Head>
-        <title>hafa.io</title>
-        <link rel="icon" href={favicon.src} />
-        <meta
-          name="google-site-verification"
-          content="GSZtecn0mSgjHOwdsGTs9h_1fok8AZ7saSkYSuZ18yE"
-        />
-      </Head>
       <div className="fixed w-full shadow bg-white bg-opacity-80 backdrop-filter backdrop-blur backdrop-saturate-125 transition-opacity duration-500 opacity-0 scroll-show dark:bg-gray-800 dark:bg-opacity-80 dark:backdrop-brightness-125">
         <div className="max-w-4xl h-full mx-auto my-2 px-6 flex items-center justify-between dark:text-gray-100">
           <Link href="/">
@@ -65,13 +49,7 @@ export default function Hero(): ReactElement {
               <span className="font-cursive text-4xl pl-2">hafa.io</span>
             </span>
           </Link>
-          <button
-            onClick={toggleTheme}
-            title={themeTitle}
-            className="p-2 rounded-full ring-teal-400 text-gray-500 hover:bg-gray-300 focus:ring dark:text-gray-400 dark:hover:bg-gray-700"
-          >
-            {themeIcon}
-          </button>
+          <ThemeButton />
         </div>
       </div>
       <div
@@ -125,6 +103,7 @@ export default function Hero(): ReactElement {
             ]}
           />
           <Project
+            logo={riso}
             name="Spot Color Separation"
             description="Website for separating an image into spot colors. Intended for decomposing images for a Risograph."
             buttons={[

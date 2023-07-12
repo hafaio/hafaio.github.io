@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build && touch docs/.nojekyll",
-    "fmt": "pnpify prettier --write --cache 'pages/**/*.{ts,tsx}' 'components/**/*.{ts,tsx}' 'styles/**/*.css' '*.{json,js,ts}'",
+    "fmt": "pnpify prettier --write --cache 'app/**/*.{ts,tsx}' 'components/**/*.{ts,tsx}' 'styles/**/*.css' '*.{json,js,ts}'",
     "lint": "next lint && tsc"
   },
   "devDependencies": {

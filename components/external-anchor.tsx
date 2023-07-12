@@ -1,4 +1,4 @@
-import { ReactElement, AnchorHTMLAttributes } from "react";
+import { AnchorHTMLAttributes, ReactElement } from "react";
 
 export default function ExternalAnchor({
   children,

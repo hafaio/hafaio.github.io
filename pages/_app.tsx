@@ -1,5 +1,5 @@
-import { ReactElement, useEffect } from "react";
 import type { AppProps } from "next/app";
+import { ReactElement, useEffect } from "react";
 import ThemeProvider from "../components/theme";
 import "../styles/globals.css";
 

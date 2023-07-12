@@ -1,12 +1,12 @@
 import {
+  PropsWithChildren,
   ReactElement,
   createContext,
-  PropsWithChildren,
-  useState,
-  useContext,
   useCallback,
-  useMemo,
+  useContext,
   useEffect,
+  useMemo,
+  useState,
 } from "react";
 
 // true for dark, false for light, undefined for default
@@ -73,7 +73,7 @@ export default function ThemeProvider({
   const [matcher, setMatcher] = useState(defaultMatcher);
   useEffect(
     () => setMatcher(window.matchMedia("(prefers-color-scheme: dark)")),
-    [setMatcher]
+    [setMatcher],
   );
   const [dark, setDark] = useState(theme ?? matcher.matches);
   useEffect(() => {

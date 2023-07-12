@@ -1,23 +1,23 @@
-import { ReactElement } from "react";
 import Head from "next/head";
-import StaticImage from "../components/static-image";
 import Link from "next/link";
-import hafa from "../public/hafa.svg";
-import asciiMath from "../public/ascii-math.svg";
-import repub from "../public/repub.svg";
-import favicon from "../public/favicon.ico";
-import splash from "../public/irina-shishkina-FMlZAUFmkvw-unsplash.jpg";
-import Project from "../components/project";
-import ExternalAnchor from "../components/external-anchor";
-import { useTheme } from "../components/theme";
+import { ReactElement } from "react";
 import {
-  FaGlobe,
+  FaAdjust,
   FaChrome,
   FaGithub,
-  FaSun,
+  FaGlobe,
   FaMoon,
-  FaAdjust,
+  FaSun,
 } from "react-icons/fa";
+import ExternalAnchor from "../components/external-anchor";
+import Project from "../components/project";
+import StaticImage from "../components/static-image";
+import { useTheme } from "../components/theme";
+import asciiMath from "../public/ascii-math.svg";
+import favicon from "../public/favicon.ico";
+import hafa from "../public/hafa.svg";
+import splash from "../public/irina-shishkina-FMlZAUFmkvw-unsplash.jpg";
+import repub from "../public/repub.svg";
 
 function FooterIcon({
   href,

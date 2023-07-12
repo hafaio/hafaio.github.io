@@ -1,6 +1,6 @@
 import { ReactElement } from "react";
-import StaticImage from "./static-image";
 import ExternalAnchor from "./external-anchor";
+import StaticImage from "./static-image";
 
 export interface ButtonProps {
   text: string;

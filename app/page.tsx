@@ -41,7 +41,7 @@ export default function Hero(): ReactElement {
           <Link href="/">
             <span className="flex items-center">
               <StaticImage
-                src={hafa}
+                src={hafa as string}
                 alt="hafa.io logo"
                 height={36}
                 width={36}
@@ -66,7 +66,7 @@ export default function Hero(): ReactElement {
         </h2>
         <ul className="px-4 space-y-8 w-full">
           <Project
-            logo={repub}
+            logo={repub as string}
             name="reMarkable ePub"
             description={`reMarkable ePub is an open source chrome extension
             for converting web pages into ePubs for reading on reMarkable. In
@@ -86,7 +86,7 @@ export default function Hero(): ReactElement {
             ]}
           />
           <Project
-            logo={asciiMath}
+            logo={asciiMath as string}
             name="Ascii Math Unicode"
             description="Ascii math unicode is an open source chrome extension for converting highlighted ascii math into unicode math expressions."
             buttons={[
@@ -103,7 +103,7 @@ export default function Hero(): ReactElement {
             ]}
           />
           <Project
-            logo={riso}
+            logo={riso as string}
             name="Spot Color Separation"
             description="Website for separating an image into spot colors. Intended for decomposing images for a Risograph."
             buttons={[

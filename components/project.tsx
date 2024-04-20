@@ -36,6 +36,7 @@ export default function Project({
         {logo && <StaticImage src={logo} alt={name} height={72} width={72} />}
       </div>
       <div className="space-y-4 p-4">
+        {/* eslint-disable-next-line spellcheck/spell-checker */}
         <h3 className="text-2xl font-semibold text-center md:text-left dark:text-gray-100">
           {name}
         </h3>

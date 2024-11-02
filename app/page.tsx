@@ -1,10 +1,10 @@
 import { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { ReactElement } from "react";
 import { FaChrome, FaGithub, FaGlobe } from "react-icons/fa";
 import ExternalAnchor from "../components/external-anchor";
 import Project from "../components/project";
-import StaticImage from "../components/static-image";
 import ThemeButton from "../components/theme-button";
 import asciiMath from "../public/ascii-math.svg";
 import hafa from "../public/hafa.svg";
@@ -15,6 +15,10 @@ import riso from "../public/riso-logo.svg";
 export const metadata: Metadata = {
   title: "hafa.io",
 };
+
+interface Svg {
+  src: string;
+}
 
 function FooterIcon({
   href,
@@ -40,8 +44,8 @@ export default function Hero(): ReactElement {
         <div className="max-w-4xl h-full mx-auto my-2 px-6 flex items-center justify-between dark:text-gray-100">
           <Link href="/">
             <span className="flex items-center">
-              <StaticImage
-                src={hafa as string}
+              <Image
+                src={(hafa as Svg).src}
                 alt="hafa.io logo"
                 height={36}
                 width={36}
@@ -66,7 +70,15 @@ export default function Hero(): ReactElement {
         </h2>
         <ul className="px-4 space-y-8 w-full">
           <Project
-            logo={repub as string}
+            logo={
+              <Image
+                src={(repub as Svg).src}
+                // eslint-disable-next-line spellcheck/spell-checker
+                alt="repub logo"
+                height={72}
+                width={72}
+              />
+            }
             name="reMarkable ePub"
             description={`reMarkable ePub is an open source chrome extension
             for converting web pages into ePubs for reading on reMarkable. In
@@ -86,7 +98,31 @@ export default function Hero(): ReactElement {
             ]}
           />
           <Project
-            logo={asciiMath as string}
+            logo={<span className="text-6xl">🐀</span>}
+            name="Loose RAT Helper"
+            description="Helper for finding 'loose' (homophone) Remote Associates Tests given a starting word."
+            buttons={[
+              {
+                text: "Website",
+                href: "https://hafaio.github.io/loose-rat",
+                icon: <FaGlobe />,
+              },
+              {
+                text: "Github",
+                href: "https://github.com/hafaio/loose-rat",
+                icon: <FaGithub />,
+              },
+            ]}
+          />
+          <Project
+            logo={
+              <Image
+                src={(asciiMath as Svg).src}
+                alt="ascii math logo"
+                height={72}
+                width={72}
+              />
+            }
             name="Ascii Math Unicode"
             description="Ascii math unicode is an open source chrome extension for converting highlighted ascii math into unicode math expressions."
             buttons={[
@@ -103,7 +139,14 @@ export default function Hero(): ReactElement {
             ]}
           />
           <Project
-            logo={riso as string}
+            logo={
+              <Image
+                src={(riso as Svg).src}
+                alt="Risograph logo"
+                height={72}
+                width={72}
+              />
+            }
             name="Spot Color Separation"
             description="Website for separating an image into spot colors. Intended for decomposing images for a Risograph."
             buttons={[

@@ -1,6 +1,5 @@
 import { ReactElement } from "react";
 import ExternalAnchor from "./external-anchor";
-import StaticImage from "./static-image";
 
 export interface ButtonProps {
   text: string;
@@ -25,15 +24,17 @@ export default function Project({
   description,
   buttons,
 }: {
-  logo?: string;
+  logo?: React.ReactElement;
   name: string;
   description: string;
   buttons: ButtonProps[];
 }): ReactElement {
+  // {logo && <StaticImage src={logo} alt={name} height={72} width={72} />}
+
   return (
     <li className="rounded-lg shadow overflow-hidden bg-gray-100 md:flex dark:bg-gray-700 dark:shadow-none">
-      <div className="bg-gray-300 h-40 flex shrink-0 justify-center align-center md:h-auto md:w-48">
-        {logo && <StaticImage src={logo} alt={name} height={72} width={72} />}
+      <div className="bg-gray-300 h-40 flex shrink-0 justify-center items-center md:h-auto md:w-48">
+        {logo ?? null}
       </div>
       <div className="space-y-4 p-4">
         {/* eslint-disable-next-line spellcheck/spell-checker */}

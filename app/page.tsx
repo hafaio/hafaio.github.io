@@ -6,11 +6,11 @@ import { FaChrome, FaGithub, FaGlobe } from "react-icons/fa";
 import ExternalAnchor from "../components/external-anchor";
 import Project from "../components/project";
 import ThemeButton from "../components/theme-button";
-import asciiMath from "../public/ascii-math.svg";
-import hafa from "../public/hafa.svg";
-import splash from "../public/irina-shishkina-FMlZAUFmkvw-unsplash.jpg";
-import repub from "../public/repub.svg";
-import riso from "../public/riso-logo.svg";
+import asciiMath from "../images/ascii-math.svg";
+import hafa from "../images/hafa.svg";
+import splash from "../images/irina-shishkina-FMlZAUFmkvw-unsplash.jpg";
+import repub from "../images/repub.svg";
+import riso from "../images/riso-logo.svg";
 
 export const metadata: Metadata = {
   title: "hafa.io",

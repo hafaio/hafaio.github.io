@@ -1,7 +1,7 @@
 import { ReactElement, ReactNode } from "react";
 import ScrollProvider from "../components/scroll";
 import ThemeProvider from "../components/theme";
-import "../styles/globals.css";
+import "./globals.css";
 
 export default function RootLayout({
   children,

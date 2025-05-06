@@ -40,7 +40,7 @@ function FooterIcon({
 export default function Hero(): ReactElement {
   return (
     <div className="dark:bg-gray-800">
-      <div className="fixed w-full shadow bg-white bg-opacity-80 backdrop-filter backdrop-blur backdrop-saturate-125 transition-opacity duration-500 opacity-0 scroll-show dark:bg-gray-800 dark:bg-opacity-80 dark:backdrop-brightness-125">
+      <div className="fixed w-full shadow-sm bg-white bg-opacity-80 backdrop-filter backdrop-blur-sm backdrop-saturate-125 transition-opacity duration-500 opacity-0 scroll-show dark:bg-gray-800 dark:bg-opacity-80 dark:backdrop-brightness-125">
         <div className="max-w-4xl h-full mx-auto my-2 px-6 flex items-center justify-between dark:text-gray-100">
           <Link href="/">
             <span className="flex items-center">
@@ -65,7 +65,7 @@ export default function Hero(): ReactElement {
         </span>
       </div>
       <div className="min-h-screen max-w-4xl mx-auto flex flex-col items-center">
-        <h2 className="text-4xl font-bold py-4 mt-4 bg-clip-text text-transparent bg-gradient-to-br from-teal-400 to-teal-500">
+        <h2 className="text-4xl font-bold py-4 mt-4 bg-clip-text text-transparent bg-linear-to-br from-teal-400 to-teal-500">
           Projects
         </h2>
         <ul className="px-4 space-y-8 w-full">

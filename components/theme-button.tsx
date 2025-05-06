@@ -14,7 +14,7 @@ export default function ThemeButton(): ReactElement {
     <button
       onClick={toggleTheme}
       title={themeTitle}
-      className="p-2 rounded-full ring-teal-400 text-gray-500 hover:bg-gray-300 focus:ring dark:text-gray-400 dark:hover:bg-gray-700"
+      className="p-2 rounded-full ring-teal-400 text-gray-500 hover:bg-gray-300 focus:ring-3 dark:text-gray-400 dark:hover:bg-gray-700"
     >
       {themeIcon}
     </button>

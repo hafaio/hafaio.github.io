@@ -1,7 +1,7 @@
-import { Metadata } from "next";
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { ReactElement } from "react";
+import type { ReactElement } from "react";
 import { FaChrome, FaGithub, FaGlobe } from "react-icons/fa";
 import ExternalAnchor from "../components/external-anchor";
 import Project from "../components/project";

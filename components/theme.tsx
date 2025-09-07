@@ -1,9 +1,9 @@
 "use client";
 
 import {
-  PropsWithChildren,
-  ReactElement,
   createContext,
+  type PropsWithChildren,
+  type ReactElement,
   useCallback,
   useContext,
   useEffect,
@@ -66,7 +66,7 @@ export default function ThemeProvider({
     return () => {
       window.removeEventListener("storage", listener);
     };
-  }, [setTheme]);
+  }, []);
 
   // persist theme
   useEffect(() => {
@@ -83,7 +83,7 @@ export default function ThemeProvider({
   const [matcher, setMatcher] = useState(defaultMatcher);
   useEffect(() => {
     setMatcher(window.matchMedia("(prefers-color-scheme: dark)"));
-  }, [setMatcher]);
+  }, []);
   const [dark, setDark] = useState(theme ?? matcher.matches);
   useEffect(() => {
     setDark(theme ?? matcher.matches);
@@ -94,7 +94,7 @@ export default function ThemeProvider({
     return () => {
       matcher.removeEventListener("change", listener);
     };
-  }, [matcher, theme, setDark]);
+  }, [matcher, theme]);
   useEffect(() => {
     if (dark) {
       document.documentElement.classList.add("dark");
@@ -116,7 +116,7 @@ export default function ThemeProvider({
       setTheme(!theme);
       setToggled(true);
     }
-  }, [theme, setTheme, matcher.matches, toggled, setToggled]);
+  }, [theme, matcher.matches, toggled]);
   const context = useMemo(() => ({ theme, toggleTheme }), [theme, toggleTheme]);
 
   return (

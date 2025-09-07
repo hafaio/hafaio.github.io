@@ -1,4 +1,4 @@
-import { ReactElement } from "react";
+import type { ReactElement } from "react";
 import ExternalAnchor from "./external-anchor";
 
 export interface ButtonProps {
@@ -10,7 +10,10 @@ export interface ButtonProps {
 function Button({ text, href, icon }: ButtonProps): ReactElement {
   return (
     <ExternalAnchor href={href} className="grow md:grow-0">
-      <button className="w-full text-gray-600 rounded-lg px-4 py-2 border transition hover:text-black hover:shadow-sm active:shadow-none space-x-2 flex justify-center items-center dark:text-gray-400 dark:hover:text-gray-100 dark:border-gray-400 dark:hover:border-gray-100 dark:hover:shadow-none focus:ring-3 ring-teal-400">
+      <button
+        type="button"
+        className="w-full text-gray-600 rounded-lg px-4 py-2 border transition hover:text-black hover:shadow-sm active:shadow-none space-x-2 flex justify-center items-center dark:text-gray-400 dark:hover:text-gray-100 dark:border-gray-400 dark:hover:border-gray-100 dark:hover:shadow-none focus:ring-3 ring-teal-400"
+      >
         <span>{text}</span>
         {icon}
       </button>

@@ -1,12 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Niconne&display=swap")
-  layer(base);
-
 @import "tailwindcss";
 
 @config "../tailwind.config.js";
 
-@theme {
-  --font-cursive: "Niconne", "ui-cursive", "cursive";
+@theme inline {
+  --font-cursive: var(--font-niconne), "ui-cursive", "cursive";
 }
 
 html {
@@ -20,4 +17,39 @@ html[data-scroll="true"] .scroll-show {
 
 html[data-scroll="true"] .scroll-hide {
   opacity: 0;
+}
+
+/* fade cards up as they scroll into view, where supported */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    @keyframes reveal {
+      from {
+        opacity: 0;
+        transform: translateY(3rem);
+      }
+    }
+
+    .reveal {
+      animation: reveal linear both;
+      animation-timeline: view();
+      animation-range: cover 0% cover 40%;
+    }
+  }
+}
+
+/* subtle zoom on the hero photo as it scrolls away, where supported */
+@supports (animation-timeline: scroll()) {
+  @media (prefers-reduced-motion: no-preference) {
+    @keyframes hero-zoom {
+      to {
+        transform: scale(1.1);
+      }
+    }
+
+    .hero-zoom {
+      animation: hero-zoom linear both;
+      animation-timeline: scroll(root);
+      animation-range: 0 100vh;
+    }
+  }
 }

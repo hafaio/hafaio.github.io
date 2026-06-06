@@ -6,3 +6,7 @@ node_modules
 cache
 .eslintcache
 out
+
+# editor / os cruft
+*.un~
+.DS_Store

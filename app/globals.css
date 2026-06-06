@@ -1,12 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Niconne&display=swap')
-layer(base);
+@import url("https://fonts.googleapis.com/css2?family=Niconne&display=swap")
+  layer(base);
 
-@import 'tailwindcss';
+@import "tailwindcss";
 
-@config '../tailwind.config.js';
+@config "../tailwind.config.js";
 
 @theme {
-  --font-cursive: 'Niconne', 'ui-cursive', 'cursive';
+  --font-cursive: "Niconne", "ui-cursive", "cursive";
 }
 
 html {

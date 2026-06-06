@@ -1,5 +1,6 @@
+/** @type {import('tailwindcss').Config} */
 export default {
-  mode: "jit",
-  content: ["./app/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}"],
+  theme: {},
+  plugins: [],
   darkMode: "class",
 };

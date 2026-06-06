@@ -40,7 +40,7 @@ function FooterIcon({
 export default function Hero(): ReactElement {
   return (
     <div className="dark:bg-gray-800">
-      <div className="fixed w-full shadow-sm bg-white bg-opacity-80 backdrop-filter backdrop-blur-sm backdrop-saturate-125 transition-opacity duration-500 opacity-0 scroll-show dark:bg-gray-800 dark:bg-opacity-80 dark:backdrop-brightness-125">
+      <div className="fixed w-full shadow-sm bg-white/80 backdrop-blur-sm backdrop-saturate-150 transition-opacity duration-500 opacity-0 scroll-show dark:bg-gray-800/80 dark:backdrop-brightness-150">
         <div className="max-w-4xl h-full mx-auto my-2 px-6 flex items-center justify-between dark:text-gray-100">
           <Link href="/">
             <span className="flex items-center">
@@ -157,7 +157,7 @@ export default function Hero(): ReactElement {
               },
               {
                 text: "Github",
-                href: "https://github.com/hafaio/ascii-math-unicode",
+                href: "https://github.com/hafaio/color-separation",
                 icon: <FaGithub />,
               },
             ]}
@@ -178,7 +178,7 @@ export default function Hero(): ReactElement {
             on{" "}
             <ExternalAnchor
               className="hover:text-teal-400"
-              href="https://unsplash.com/@whoisrobinhood?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+              href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
             >
               Unsplash
             </ExternalAnchor>

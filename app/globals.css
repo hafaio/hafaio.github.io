@@ -10,9 +10,17 @@ html {
   scroll-behavior: smooth;
 }
 
-/* hide or show if scrolled to the top */
+/* hide or show if scrolled to the top; kept non-interactive while hidden so the
+   invisible header doesn't intercept clicks or steal tab focus over the hero */
+.scroll-show {
+  visibility: hidden;
+  pointer-events: none;
+}
+
 html[data-scroll="true"] .scroll-show {
   opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 }
 
 html[data-scroll="true"] .scroll-hide {

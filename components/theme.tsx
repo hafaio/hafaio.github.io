@@ -11,7 +11,7 @@ import {
   useState,
 } from "react";
 
-// true for dark, false for light, undefined for default
+// true for dark, false for light, undefined for follow-system
 const ThemeContext = createContext({
   theme: undefined as boolean | undefined,
   toggleTheme: () => {
@@ -26,37 +26,20 @@ export function useTheme(): {
   return useContext(ThemeContext);
 }
 
-interface Matcher {
-  matches: boolean;
-  addEventListener(typ: "change", cb: () => void): void;
-  removeEventListener(typ: "change", cb: () => void): void;
-}
-
-const defaultMatcher: Matcher = {
-  matches: false,
-  addEventListener() {
-    // noop
-  },
-  removeEventListener() {
-    // noop
-  },
-};
-
 export default function ThemeProvider({
   children,
 }: PropsWithChildren): ReactElement {
   const [theme, setTheme] = useState(undefined as boolean | undefined);
 
-  // fetch theme from storage events
+  // load the persisted theme and keep in sync with other tabs
   useEffect(() => {
     function listener(): void {
-      const theme = window.localStorage.getItem("theme");
-      if (theme === "dark") {
+      const stored = window.localStorage.getItem("theme");
+      if (stored === "dark") {
         setTheme(true);
-      } else if (theme === "light") {
+      } else if (stored === "light") {
         setTheme(false);
       } else {
-        window.localStorage.removeItem("theme");
         setTheme(undefined);
       }
     }
@@ -68,47 +51,29 @@ export default function ThemeProvider({
     };
   }, []);
 
-  // persist theme
+  // reflect the choice onto <html data-theme> and persist it; no attribute
+  // means "follow the system preference", which the CSS resolves on its own
   useEffect(() => {
+    const { dataset } = document.documentElement;
     if (theme === undefined) {
+      delete dataset.theme;
       window.localStorage.removeItem("theme");
-    } else if (theme) {
-      window.localStorage.setItem("theme", "dark");
     } else {
-      window.localStorage.setItem("theme", "light");
+      const value = theme ? "dark" : "light";
+      dataset.theme = value;
+      window.localStorage.setItem("theme", value);
     }
   }, [theme]);
 
-  // set actual dark state that toggles class by watching the media query
-  const [matcher, setMatcher] = useState(defaultMatcher);
-  useEffect(() => {
-    setMatcher(window.matchMedia("(prefers-color-scheme: dark)"));
-  }, []);
-  const [dark, setDark] = useState(theme ?? matcher.matches);
-  useEffect(() => {
-    setDark(theme ?? matcher.matches);
-    const listener = () => {
-      setDark(theme ?? matcher.matches);
-    };
-    matcher.addEventListener("change", listener);
-    return () => {
-      matcher.removeEventListener("change", listener);
-    };
-  }, [matcher, theme]);
-  useEffect(() => {
-    if (dark) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
-  }, [dark]);
-
-  // implement toggle theme that smartly has the first toggle always invert the
-  // theme whether it's manually set or set to system
+  // the first toggle always inverts the current (possibly system) theme; a
+  // second toggle returns to following the system preference
   const [toggled, setToggled] = useState(false);
   const toggleTheme = useCallback(() => {
     if (theme === undefined) {
-      setTheme(!matcher.matches);
+      const prefersDark = window.matchMedia(
+        "(prefers-color-scheme: dark)",
+      ).matches;
+      setTheme(!prefersDark);
     } else if (toggled) {
       setTheme(undefined);
       setToggled(false);
@@ -116,7 +81,7 @@ export default function ThemeProvider({
       setTheme(!theme);
       setToggled(true);
     }
-  }, [theme, matcher.matches, toggled]);
+  }, [theme, toggled]);
   const context = useMemo(() => ({ theme, toggleTheme }), [theme, toggleTheme]);
 
   return (

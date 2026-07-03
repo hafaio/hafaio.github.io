@@ -40,7 +40,6 @@ export default function Project({
         {logo ?? null}
       </div>
       <div className="flex flex-col gap-4 p-4">
-        {/* eslint-disable-next-line spellcheck/spell-checker */}
         <h3 className="text-2xl font-semibold text-center md:text-left dark:text-zinc-100">
           {name}
         </h3>

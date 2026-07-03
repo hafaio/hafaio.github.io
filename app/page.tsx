@@ -84,7 +84,6 @@ export default function Hero(): ReactElement {
             logo={
               <Image
                 src={(repub as Svg).src}
-                // eslint-disable-next-line spellcheck/spell-checker
                 alt="repub logo"
                 height={72}
                 width={72}

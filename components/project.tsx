@@ -3,20 +3,18 @@ import ExternalAnchor from "./external-anchor";
 
 export interface ButtonProps {
   text: string;
-  href?: string;
+  href: string;
   icon?: ReactElement;
 }
 
 function Button({ text, href, icon }: ButtonProps): ReactElement {
   return (
-    <ExternalAnchor href={href} className="grow md:grow-0">
-      <button
-        type="button"
-        className="w-full rounded-lg px-4 py-2 transition-colors bg-zinc-100 text-zinc-700 hover:bg-teal-50 hover:text-teal-700 space-x-2 flex justify-center items-center dark:bg-zinc-700/60 dark:text-zinc-300 dark:hover:bg-teal-950/50 dark:hover:text-teal-300 focus:ring-3 ring-teal-400"
-      >
-        <span>{text}</span>
-        {icon}
-      </button>
+    <ExternalAnchor
+      href={href}
+      className="grow md:grow-0 rounded-lg px-4 py-2 transition-colors bg-zinc-100 text-zinc-700 hover:bg-teal-50 hover:text-teal-700 space-x-2 flex justify-center items-center dark:bg-zinc-700/60 dark:text-zinc-300 dark:hover:bg-teal-950/50 dark:hover:text-teal-300 focus:ring-3 ring-teal-400"
+    >
+      <span>{text}</span>
+      {icon}
     </ExternalAnchor>
   );
 }

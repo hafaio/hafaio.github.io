@@ -1,7 +1,5 @@
 @import "tailwindcss";
 
-@config "../tailwind.config.js";
-
 /* dark: follows the system preference, so the common "follow system" path never
    flashes. A manual choice pins [data-theme] on <html> (set after hydration):
    an explicit dark always wins, an explicit light suppresses the media query.

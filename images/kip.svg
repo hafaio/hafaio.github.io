@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- kip's wordmark tile: the gradient mark and extrabold "k" from
+       kip/web/components/wordmark.tsx. The letter is the real Plus Jakarta Sans
+       800 glyph converted to an outline, so it renders without the webfont. The
+       terracotta ramp is hue-rotated 180° into hafa.io's cool palette. -->
+  <defs>
+    <linearGradient id="kip" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2fb9e2" />
+      <stop offset="0.55" stop-color="#38a2ee" />
+      <stop offset="1" stop-color="#4a8ef6" />
+    </linearGradient>
+  </defs>
+  <circle cx="32" cy="32" r="32" fill="url(#kip)" />
+  <path
+    transform="translate(22.55 43.355) scale(0.03 -0.03)"
+    fill="#ffffff"
+    d="M55 0V757H205V272L149 290L390 546H575L377 326L574 0H404L239 277L326 299L159 117L205 204V0Z"
+  />
+</svg>

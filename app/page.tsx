@@ -9,6 +9,7 @@ import ThemeButton from "../components/theme-button";
 import asciiMath from "../images/ascii-math.svg";
 import hafa from "../images/hafa.svg";
 import splash from "../images/irina-shishkina-FMlZAUFmkvw-unsplash.jpg";
+import kip from "../images/kip.svg";
 import repub from "../images/repub.svg";
 import riso from "../images/riso-logo.svg";
 import scenicRoute from "../images/scenic-route.svg";
@@ -214,6 +215,31 @@ export default function Hero(): ReactElement {
               {
                 text: "Github",
                 href: "https://github.com/hafaio/synesthizer",
+                icon: <FaGithub />,
+              },
+            ]}
+          />
+          <Project
+            tint="from-white to-teal-50 dark:from-zinc-800 dark:to-teal-950/30"
+            logo={
+              <Image
+                src={(kip as Svg).src}
+                alt="kip logo"
+                height={72}
+                width={72}
+              />
+            }
+            name="kip"
+            description="Friends-only space sharing. List a spare room or your whole place, mark the dates it's free, and let friends book it. No money changes hands."
+            buttons={[
+              {
+                text: "Website",
+                href: "https://hafaio.github.io/kip",
+                icon: <FaGlobe />,
+              },
+              {
+                text: "Github",
+                href: "https://github.com/hafaio/kip",
                 icon: <FaGithub />,
               },
             ]}

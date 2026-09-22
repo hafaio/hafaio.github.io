@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import type { ReactElement } from "react";
@@ -13,9 +12,23 @@ import kip from "../images/kip.svg";
 import repub from "../images/repub.svg";
 import riso from "../images/riso-logo.svg";
 import scenicRoute from "../images/scenic-route.svg";
+import {
+  AUTHOR_GITHUB,
+  ORG_GITHUB,
+  SITE_DESCRIPTION,
+  SITE_NAME,
+  SITE_URL,
+} from "../lib/site";
 
-export const metadata: Metadata = {
-  title: "hafa.io",
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": `${SITE_URL}/#website`,
+  url: `${SITE_URL}/`,
+  name: SITE_NAME,
+  description: SITE_DESCRIPTION,
+  inLanguage: "en",
+  sameAs: [AUTHOR_GITHUB, ORG_GITHUB],
 };
 
 interface Svg {
@@ -42,6 +55,11 @@ function FooterIcon({
 export default function Hero(): ReactElement {
   return (
     <div className="bg-zinc-50 dark:bg-zinc-900">
+      <script
+        type="application/ld+json"
+        // biome-ignore lint/security/noDangerouslySetInnerHtml: static JSON-LD built from constants
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <header className="fixed z-50 w-full shadow-sm bg-white/80 backdrop-blur-sm backdrop-saturate-150 transition-[opacity,visibility] duration-500 opacity-0 scroll-show dark:bg-zinc-800/80 dark:backdrop-brightness-150">
         <div className="max-w-4xl h-full mx-auto my-2 px-6 flex items-center justify-between dark:text-zinc-100">
           <Link href="/">

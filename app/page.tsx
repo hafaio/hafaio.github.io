@@ -1,7 +1,27 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { ReactElement } from "react";
-import { FaChrome, FaGithub, FaGlobe } from "react-icons/fa";
+import {
+  FaBook,
+  FaBox,
+  FaBullseye,
+  FaChessKnight,
+  FaChrome,
+  FaDatabase,
+  FaFont,
+  FaGithub,
+  FaGlobe,
+  FaGlobeAmericas,
+  FaMicrochip,
+  FaMugHot,
+  FaNpm,
+  FaProjectDiagram,
+  FaShapes,
+  FaSquareRootAlt,
+  FaStream,
+  FaTabletAlt,
+} from "react-icons/fa";
+import { SiPypi } from "react-icons/si";
 import ExternalAnchor from "../components/external-anchor";
 import Project from "../components/project";
 import ThemeButton from "../components/theme-button";
@@ -91,13 +111,13 @@ export default function Hero(): ReactElement {
         </h1>
       </div>
       <main className="min-h-screen max-w-4xl mx-auto flex flex-col items-center pb-32">
-        <section aria-labelledby="projects" className="w-full">
+        <section aria-labelledby="apps" className="w-full">
           <div className="reveal flex flex-col items-center gap-3 py-8 mt-4">
             <h2
-              id="projects"
+              id="apps"
               className="text-4xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100"
             >
-              Projects
+              Apps
             </h2>
             <span className="h-1 w-16 rounded-full bg-linear-to-r from-teal-400 to-teal-500" />
           </div>
@@ -193,7 +213,7 @@ export default function Hero(): ReactElement {
                 },
                 {
                   text: "Github",
-                  href: "https://github.com/hafaio/ascii-math-unicode",
+                  href: "https://github.com/hafaio/asciimath-unicode",
                   icon: <FaGithub />,
                 },
               ]}
@@ -262,6 +282,363 @@ export default function Hero(): ReactElement {
                 {
                   text: "Github",
                   href: "https://github.com/hafaio/kip",
+                  icon: <FaGithub />,
+                },
+              ]}
+            />
+          </ul>
+        </section>
+        <section aria-labelledby="libraries" className="w-full">
+          <div className="reveal flex flex-col items-center gap-3 py-8 mt-4">
+            <h2
+              id="libraries"
+              className="text-4xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100"
+            >
+              Libraries
+            </h2>
+            <span className="h-1 w-16 rounded-full bg-linear-to-r from-teal-400 to-teal-500" />
+          </div>
+          <ul className="px-4 w-full columns-1 md:columns-2 lg:columns-3 gap-6">
+            <Project
+              tint="from-white to-amber-50 dark:from-zinc-800 dark:to-amber-950/30"
+              logo={
+                <FaProjectDiagram
+                  size={72}
+                  className="text-yellow-500"
+                  aria-hidden="true"
+                />
+              }
+              name="d3-dag"
+              description="Lightweight, TypeScript-first layered layout algorithms for directed acyclic graphs on the web."
+              buttons={[
+                {
+                  text: "NPM",
+                  href: "https://www.npmjs.com/package/d3-dag",
+                  icon: <FaNpm />,
+                },
+                {
+                  text: "Docs",
+                  href: "https://erikbrinkman.github.io/d3-dag/",
+                  icon: <FaBook />,
+                },
+                {
+                  text: "Github",
+                  href: "https://github.com/erikbrinkman/d3-dag",
+                  icon: <FaGithub />,
+                },
+              ]}
+            />
+            <Project
+              tint="from-white to-lime-50 dark:from-zinc-800 dark:to-lime-950/30"
+              logo={
+                <FaStream
+                  size={72}
+                  className="text-yellow-500"
+                  aria-hidden="true"
+                />
+              }
+              name="mhtml-stream"
+              description="Parse MHTML data as a stream using WHATWG streams and async iterators."
+              buttons={[
+                {
+                  text: "NPM",
+                  href: "https://www.npmjs.com/package/mhtml-stream",
+                  icon: <FaNpm />,
+                },
+                {
+                  text: "Docs",
+                  href: "https://erikbrinkman.github.io/mhtml-stream/",
+                  icon: <FaBook />,
+                },
+                {
+                  text: "Github",
+                  href: "https://github.com/erikbrinkman/mhtml-stream",
+                  icon: <FaGithub />,
+                },
+              ]}
+            />
+            <Project
+              tint="from-white to-rose-50 dark:from-zinc-800 dark:to-rose-950/30"
+              logo={
+                <FaMugHot
+                  size={72}
+                  className="text-yellow-500"
+                  aria-hidden="true"
+                />
+              }
+              name="teapub"
+              description="Pure TypeScript library for generating ePub files from preact components."
+              buttons={[
+                {
+                  text: "NPM",
+                  href: "https://www.npmjs.com/package/teapub",
+                  icon: <FaNpm />,
+                },
+                {
+                  text: "Docs",
+                  href: "https://erikbrinkman.github.io/teapub/",
+                  icon: <FaBook />,
+                },
+                {
+                  text: "Github",
+                  href: "https://github.com/erikbrinkman/teapub",
+                  icon: <FaGithub />,
+                },
+              ]}
+            />
+            <Project
+              tint="from-white to-emerald-50 dark:from-zinc-800 dark:to-emerald-950/30"
+              logo={
+                <FaTabletAlt
+                  size={72}
+                  className="text-yellow-500"
+                  aria-hidden="true"
+                />
+              }
+              name="rmapi-js"
+              description="JavaScript implementation of the reMarkable cloud API."
+              buttons={[
+                {
+                  text: "NPM",
+                  href: "https://www.npmjs.com/package/rmapi-js",
+                  icon: <FaNpm />,
+                },
+                {
+                  text: "Docs",
+                  href: "https://erikbrinkman.github.io/rmapi-js/",
+                  icon: <FaBook />,
+                },
+                {
+                  text: "Github",
+                  href: "https://github.com/erikbrinkman/rmapi-js",
+                  icon: <FaGithub />,
+                },
+              ]}
+            />
+            <Project
+              tint="from-white to-orange-50 dark:from-zinc-800 dark:to-orange-950/30"
+              logo={
+                <FaSquareRootAlt
+                  size={72}
+                  className="text-orange-700 dark:text-orange-400"
+                  aria-hidden="true"
+                />
+              }
+              name="asciimath-parser"
+              description="Fast, extensible, memory-efficient asciimath parser for Rust."
+              buttons={[
+                {
+                  text: "Crates",
+                  href: "https://crates.io/crates/asciimath-parser",
+                  icon: <FaBox />,
+                },
+                {
+                  text: "Docs",
+                  href: "https://docs.rs/asciimath-parser",
+                  icon: <FaBook />,
+                },
+                {
+                  text: "Github",
+                  href: "https://github.com/erikbrinkman/asciimath-parser",
+                  icon: <FaGithub />,
+                },
+              ]}
+            />
+            <Project
+              tint="from-white to-red-50 dark:from-zinc-800 dark:to-red-950/30"
+              logo={
+                <FaFont
+                  size={72}
+                  className="text-orange-700 dark:text-orange-400"
+                  aria-hidden="true"
+                />
+              }
+              name="asciimath-unicode"
+              description="Render asciimath as unicode text, as a Rust library or command line tool."
+              buttons={[
+                {
+                  text: "Crates",
+                  href: "https://crates.io/crates/asciimath-unicode",
+                  icon: <FaBox />,
+                },
+                {
+                  text: "Docs",
+                  href: "https://docs.rs/asciimath-unicode",
+                  icon: <FaBook />,
+                },
+                {
+                  text: "Github",
+                  href: "https://github.com/erikbrinkman/asciimath-unicode-rs",
+                  icon: <FaGithub />,
+                },
+              ]}
+            />
+            <Project
+              tint="from-white to-fuchsia-50 dark:from-zinc-800 dark:to-fuchsia-950/30"
+              logo={
+                <FaChessKnight
+                  size={72}
+                  className="text-orange-700 dark:text-orange-400"
+                  aria-hidden="true"
+                />
+              }
+              name="cfr"
+              description="Counterfactual regret minimization solver for two-player zero-sum games with incomplete information, as a Rust library and binary."
+              buttons={[
+                {
+                  text: "Crates",
+                  href: "https://crates.io/crates/cfr",
+                  icon: <FaBox />,
+                },
+                { text: "Docs", href: "https://docs.rs/cfr", icon: <FaBook /> },
+                {
+                  text: "Github",
+                  href: "https://github.com/erikbrinkman/cfr",
+                  icon: <FaGithub />,
+                },
+              ]}
+            />
+            <Project
+              tint="from-white to-green-50 dark:from-zinc-800 dark:to-green-950/30"
+              logo={
+                <FaGlobeAmericas
+                  size={72}
+                  className="text-blue-600 dark:text-blue-400"
+                  aria-hidden="true"
+                />
+              }
+              name="fiblat"
+              description="Small python package for generating uniformly spaced points on a sphere."
+              buttons={[
+                {
+                  text: "PyPI",
+                  href: "https://pypi.org/project/fiblat/",
+                  icon: <SiPypi />,
+                },
+                {
+                  text: "Docs",
+                  href: "https://hafaio.github.io/fibonacci_lattice/",
+                  icon: <FaBook />,
+                },
+                {
+                  text: "Github",
+                  href: "https://github.com/hafaio/fibonacci_lattice",
+                  icon: <FaGithub />,
+                },
+              ]}
+            />
+            <Project
+              tint="from-white to-pink-50 dark:from-zinc-800 dark:to-pink-950/30"
+              logo={
+                <FaMicrochip
+                  size={72}
+                  className="text-blue-600 dark:text-blue-400"
+                  aria-hidden="true"
+                />
+              }
+              name="hilbert-bytes"
+              description="Python library for converting between d-dimensional points and their index on a Hilbert curve."
+              buttons={[
+                {
+                  text: "PyPI",
+                  href: "https://pypi.org/project/hilbert-bytes/",
+                  icon: <SiPypi />,
+                },
+                {
+                  text: "Docs",
+                  href: "https://hafaio.github.io/hilbert-bytes/",
+                  icon: <FaBook />,
+                },
+                {
+                  text: "Github",
+                  href: "https://github.com/hafaio/hilbert-bytes",
+                  icon: <FaGithub />,
+                },
+              ]}
+            />
+            <Project
+              tint="from-white to-yellow-50 dark:from-zinc-800 dark:to-yellow-950/30"
+              logo={
+                <FaShapes
+                  size={72}
+                  className="text-blue-600 dark:text-blue-400"
+                  aria-hidden="true"
+                />
+              }
+              name="homeotopy"
+              description="Python library for computing homeomorphisms between common continuous spaces."
+              buttons={[
+                {
+                  text: "PyPI",
+                  href: "https://pypi.org/project/homeotopy/",
+                  icon: <SiPypi />,
+                },
+                {
+                  text: "Docs",
+                  href: "https://hafaio.github.io/homeotopy/",
+                  icon: <FaBook />,
+                },
+                {
+                  text: "Github",
+                  href: "https://github.com/hafaio/homeotopy",
+                  icon: <FaGithub />,
+                },
+              ]}
+            />
+            <Project
+              tint="from-white to-sky-50 dark:from-zinc-800 dark:to-sky-950/30"
+              logo={
+                <FaDatabase
+                  size={72}
+                  className="text-blue-600 dark:text-blue-400"
+                  aria-hidden="true"
+                />
+              }
+              name="polars-avro"
+              description="Polars IO plugin for reading and writing Apache Avro files, built on arrow-avro."
+              buttons={[
+                {
+                  text: "PyPI",
+                  href: "https://pypi.org/project/polars-avro/",
+                  icon: <SiPypi />,
+                },
+                {
+                  text: "Docs",
+                  href: "https://hafaio.github.io/polars-avro/",
+                  icon: <FaBook />,
+                },
+                {
+                  text: "Github",
+                  href: "https://github.com/hafaio/polars-avro",
+                  icon: <FaGithub />,
+                },
+              ]}
+            />
+            <Project
+              tint="from-white to-teal-50 dark:from-zinc-800 dark:to-teal-950/30"
+              logo={
+                <FaBullseye
+                  size={72}
+                  className="text-blue-600 dark:text-blue-400"
+                  aria-hidden="true"
+                />
+              }
+              name="scarfs"
+              description="Find an approximate fixed point of a bounded vector-valued function."
+              buttons={[
+                {
+                  text: "PyPI",
+                  href: "https://pypi.org/project/scarfs/",
+                  icon: <SiPypi />,
+                },
+                {
+                  text: "Docs",
+                  href: "https://erikbrinkman.github.io/scarfs/",
+                  icon: <FaBook />,
+                },
+                {
+                  text: "Github",
+                  href: "https://github.com/erikbrinkman/scarfs",
                   icon: <FaGithub />,
                 },
               ]}

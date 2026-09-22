@@ -11,7 +11,7 @@ function Button({ text, href, icon }: ButtonProps): ReactElement {
   return (
     <ExternalAnchor
       href={href}
-      className="grow md:grow-0 rounded-lg px-4 py-2 transition-colors bg-zinc-100 text-zinc-700 hover:bg-teal-50 hover:text-teal-700 space-x-2 flex justify-center items-center dark:bg-zinc-700/60 dark:text-zinc-300 dark:hover:bg-teal-950/50 dark:hover:text-teal-300 focus:ring-3 ring-teal-400"
+      className="grow rounded-lg px-4 py-2 transition-colors bg-zinc-100 text-zinc-700 hover:bg-teal-50 hover:text-teal-700 space-x-2 flex justify-center items-center dark:bg-zinc-700/60 dark:text-zinc-300 dark:hover:bg-teal-950/50 dark:hover:text-teal-300 focus:ring-3 ring-teal-400"
     >
       <span>{text}</span>
       {icon}
@@ -44,7 +44,7 @@ export default function Project({
           {name}
         </h3>
         <p className="text-zinc-600 dark:text-zinc-400">{description}</p>
-        <div className="flex space-x-4">
+        <div className="flex flex-wrap gap-4">
           {buttons.map((props) => (
             <Button {...props} key={props.text} />
           ))}

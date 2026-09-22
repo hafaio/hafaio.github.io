@@ -13,11 +13,11 @@ import { SiPolars, SiPypi } from "react-icons/si";
 import { TbBraces, TbHierarchy3 } from "react-icons/tb";
 import ExternalAnchor from "../components/external-anchor";
 import FiblatLogo from "../components/fiblat-logo";
+import HafaLogo from "../components/hafa-logo";
 import HilbertLogo from "../components/hilbert-logo";
 import Project from "../components/project";
 import ThemeButton from "../components/theme-button";
 import asciiMath from "../images/ascii-math.svg";
-import hafa from "../images/hafa.svg";
 import splash from "../images/irina-shishkina-FMlZAUFmkvw-unsplash.jpg";
 import kip from "../images/kip.svg";
 import remarkableLogo from "../images/remarkable-logo.svg";
@@ -76,13 +76,12 @@ export default function Hero(): ReactElement {
         <div className="max-w-4xl h-full mx-auto my-2 px-6 flex items-center justify-between dark:text-zinc-100">
           <Link href="/">
             <span className="flex items-center">
-              <Image
-                src={(hafa as Svg).src}
-                alt="hafa.io logo"
-                height={36}
-                width={36}
+              <HafaLogo
+                width={28}
+                height={28}
+                className="text-[#14151a] dark:text-zinc-100"
               />
-              <span className="font-cursive text-4xl pl-2">hafa.io</span>
+              <span className="font-cursive text-4xl pl-2">hafa</span>
             </span>
           </Link>
           <ThemeButton />
@@ -99,7 +98,7 @@ export default function Hero(): ReactElement {
         />
         <div className="absolute inset-0 bg-linear-to-t from-black/40 to-transparent" />
         <h1 className="relative text-8xl font-bold text-white transition-opacity duration-500 scroll-hide font-cursive select-none">
-          hafa.io
+          hafa
         </h1>
       </div>
       <main className="min-h-screen max-w-4xl mx-auto flex flex-col items-center pb-32">
@@ -129,12 +128,12 @@ export default function Hero(): ReactElement {
               buttons={[
                 {
                   text: "Website",
-                  href: "https://hafaio.github.io/scenic-route",
+                  href: "https://hafa.cc/scenic-route/",
                   icon: <FaGlobe />,
                 },
                 {
                   text: "Github",
-                  href: "https://github.com/hafaio/scenic-route",
+                  href: "https://github.com/hafacc/scenic-route",
                   icon: <FaGithub />,
                 },
               ]}
@@ -154,12 +153,12 @@ export default function Hero(): ReactElement {
               buttons={[
                 {
                   text: "Website",
-                  href: "https://hafaio.github.io/kip",
+                  href: "https://hafa.cc/kip/",
                   icon: <FaGlobe />,
                 },
                 {
                   text: "Github",
-                  href: "https://github.com/hafaio/kip",
+                  href: "https://github.com/hafacc/kip",
                   icon: <FaGithub />,
                 },
               ]}
@@ -187,7 +186,7 @@ export default function Hero(): ReactElement {
                 },
                 {
                   text: "Github",
-                  href: "https://github.com/hafaio/repub",
+                  href: "https://github.com/hafacc/repub",
                   icon: <FaGithub />,
                 },
               ]}
@@ -207,12 +206,12 @@ export default function Hero(): ReactElement {
               buttons={[
                 {
                   text: "Website",
-                  href: "https://hafaio.github.io/color-separation",
+                  href: "https://hafa.cc/color-separation/",
                   icon: <FaGlobe />,
                 },
                 {
                   text: "Github",
-                  href: "https://github.com/hafaio/color-separation",
+                  href: "https://github.com/hafacc/color-separation",
                   icon: <FaGithub />,
                 },
               ]}
@@ -225,12 +224,12 @@ export default function Hero(): ReactElement {
               buttons={[
                 {
                   text: "Website",
-                  href: "https://hafaio.github.io/loose-rat",
+                  href: "https://hafa.cc/loose-rat/",
                   icon: <FaGlobe />,
                 },
                 {
                   text: "Github",
-                  href: "https://github.com/hafaio/loose-rat",
+                  href: "https://github.com/hafacc/loose-rat",
                   icon: <FaGithub />,
                 },
               ]}
@@ -255,7 +254,7 @@ export default function Hero(): ReactElement {
                 },
                 {
                   text: "Github",
-                  href: "https://github.com/hafaio/asciimath-unicode",
+                  href: "https://github.com/hafacc/asciimath-unicode",
                   icon: <FaGithub />,
                 },
               ]}
@@ -268,12 +267,12 @@ export default function Hero(): ReactElement {
               buttons={[
                 {
                   text: "Website",
-                  href: "https://hafaio.github.io/synesthizer",
+                  href: "https://hafa.cc/synesthizer/",
                   icon: <FaGlobe />,
                 },
                 {
                   text: "Github",
-                  href: "https://github.com/hafaio/synesthizer",
+                  href: "https://github.com/hafacc/synesthizer",
                   icon: <FaGithub />,
                 },
               ]}
@@ -450,7 +449,7 @@ export default function Hero(): ReactElement {
                 },
                 {
                   text: "Github",
-                  href: "https://github.com/hafaio/fibonacci_lattice",
+                  href: "https://github.com/hafacc/fibonacci_lattice",
                   icon: <FaGithub />,
                 },
               ]}
@@ -475,7 +474,7 @@ export default function Hero(): ReactElement {
                 },
                 {
                   text: "Github",
-                  href: "https://github.com/hafaio/hilbert-bytes",
+                  href: "https://github.com/hafacc/hilbert-bytes",
                   icon: <FaGithub />,
                 },
               ]}
@@ -493,7 +492,7 @@ export default function Hero(): ReactElement {
                 },
                 {
                   text: "Github",
-                  href: "https://github.com/hafaio/homeotopy",
+                  href: "https://github.com/hafacc/homeotopy",
                   icon: <FaGithub />,
                 },
               ]}
@@ -517,7 +516,7 @@ export default function Hero(): ReactElement {
                 },
                 {
                   text: "Github",
-                  href: "https://github.com/hafaio/polars-avro",
+                  href: "https://github.com/hafacc/polars-avro",
                   icon: <FaGithub />,
                 },
               ]}
@@ -544,7 +543,7 @@ export default function Hero(): ReactElement {
         </section>
         <footer className="my-8 space-y-2 w-full text-zinc-600 dark:text-zinc-400">
           <div className="text-md flex justify-center">
-            <FooterIcon href="https://github.com/hafaio" icon={<FaGithub />} />
+            <FooterIcon href={ORG_GITHUB} icon={<FaGithub />} />
           </div>
           <div className="text-center text-sm">
             Hero photo by{" "}

@@ -44,7 +44,7 @@ export default function Project({
           {name}
         </h3>
         <p className="text-zinc-600 dark:text-zinc-400">{description}</p>
-        <div className="flex space-x-4">
+        <div className="flex flex-wrap gap-4">
           {buttons.map((props) => (
             <Button {...props} key={props.text} />
           ))}

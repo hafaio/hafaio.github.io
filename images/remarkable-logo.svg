@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.53 16" width="64" height="64" fill="currentColor">
+  <!-- reMarkable's mark, taken from the inline header logo on remarkable.com:
+       the two subpaths that sit to the left of the wordmark. -->
+  <path d="M0 0.47733L7.76128 8.23862V15.9999L0 8.23862V0.47733ZM13.2932 0.47733C10.2679 0.47733 7.76128 2.96531 7.76128 8.11862V8.23862C8.55728 7.52262 10.2892 6.74663 11.7812 6.74663C13.0146 6.74663 14.3092 7.18396 15.5226 8.23862V0.895994C14.7666 0.617329 14.0106 0.478664 13.2932 0.478664V0.47733Z"/>
+</svg>

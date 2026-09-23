@@ -2,7 +2,7 @@
   <!-- kip's wordmark tile: the gradient mark and extrabold "k" from
        kip/web/components/wordmark.tsx. The letter is the real Plus Jakarta Sans
        800 glyph converted to an outline, so it renders without the webfont. The
-       terracotta ramp is hue-rotated 180° into hafa.io's cool palette. -->
+       terracotta ramp is hue-rotated 180° into hafa's cool palette. -->
   <defs>
     <linearGradient id="kip" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#2fb9e2" />

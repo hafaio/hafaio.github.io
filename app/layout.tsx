@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   },
   description: SITE_DESCRIPTION,
   applicationName: SITE_NAME,
-  keywords: ["hafa.io", "open source", "math", "geometry"],
+  keywords: ["hafa", "hafa.cc", "open source", "math", "geometry"],
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
